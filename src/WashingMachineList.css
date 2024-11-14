@@ -1,0 +1,16 @@
+/* 세탁기 목록 정렬 CSS */
+.washing-machine-list {
+    display: flex; 
+    flex-wrap: wrap; /* 자동으로 다음 줄로 넘어감 */
+    justify-content: center;
+    align-items: center; /* 세로 축도 정렬 개꿀*/
+    width: 900px; /* 3열로 배치될 수 있는 최대 너비를 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+  
+  .washing-machine {
+    flex: 1 0 30%; /* 세탁기를 3열로 고정 */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
