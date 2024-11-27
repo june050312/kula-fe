@@ -1,3 +1,5 @@
+import './components.css';
+
 function Navbar() {
   return (
     <nav className="navbar">
