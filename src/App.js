@@ -1,11 +1,16 @@
 import './App.css';
-import Laundary from './pages/Laundary';
+import MainPage from './pages/Mainpage';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <h1>세탁기 상태 관리</h1>
-      <Laundary />
+      <Navbar />
+      <div className="content">
+        <MainPage />
+      </div>
+      <Footer />
     </div>
   );
 }
