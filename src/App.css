@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -26,6 +29,68 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.content {
+  flex: 1;
+  margin-top: 60px;
+}
+
+/* 상단 메뉴 */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #AECCCB;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.login-button,
+.signup-button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.login-button {
+  background-color: #8C7F6A;
+  color: white;
+}
+
+.signup-button {
+  background-color: #B9D9D8;
+  color: #332E2E;
+}
+
+/* 버튼 효과 */
+.login-button:hover,
+.signup-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
 }
 
 @keyframes App-logo-spin {
