@@ -1,16 +1,343 @@
-/* 세탁기 목록 정렬 CSS */
-.washing-machine-list {
-    display: flex; 
-    flex-wrap: wrap; /* 자동으로 다음 줄로 넘어감 */
-    justify-content: center;
-    align-items: center; /* 세로 축도 정렬 개꿀*/
-    width: 900px; /* 3열로 배치될 수 있는 최대 너비를 설정 */
-    margin: 0 auto; /* 중앙 정렬 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 메인 화면 */
+.main-content {
+  display: flex;
+  height: 100%;
+  min-height: calc(100vh - 60px);
+}
+
+/* 왼쪽 섹션 */
+.left-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  background-color: #D3D5D1;
+  text-align: left;
+}
+
+.left-content {
+  max-width: 600px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #332E2E;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: #332E2E;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #332E2E;
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: 2px solid #7F7360;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #7F7360;
+  background-color: #D3D5D1;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #7F7360;
+  opacity: 0.7;
+}
+
+.search-input:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.3s ease;
+}
+
+.suggestions-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggestion-item:hover {
+  background-color: #f5f5f5;
+}
+
+.suggestion-name {
+  font-weight: 500;
+}
+
+.suggestion-location {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.search-button {
+  padding: 1rem 2rem;
+  background-color: #AECCCB;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+
+.register-button {
+  padding: 1rem 2rem;
+  background-color: #332E2E;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* 버튼 효과 */
+.search-button:hover,
+.register-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 오른쪽 섹션 */
+.right-section {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: transparent;
+  padding-top: 120px;
+  padding-left: 60px;
+}
+
+.completion-text {
+  color: #332E2E;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* 세탁소 상세 페이지 스타일 */
+.laundry-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.laundry-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.laundry-image {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.laundry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.laundry-details h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.laundry-details .location {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.machines-section {
+  padding: 2rem;
+}
+
+.machines-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.machines-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.machine-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.machine-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+.machine-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.machine-status {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.machine-status.available {
+  background-color: #AECCCB;
+  color: white;
+}
+
+.machine-status.available:hover {
+  background-color: #9DBDBC;
+}
+
+.machine-status.in-use {
+  background-color: #ff4444;
+  color: white;
+}
+
+.machine-status:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: #ff4444;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    height: auto;
   }
-  
-  .washing-machine {
-    flex: 1 0 30%; /* 세탁기를 3열로 고정 */
-    box-sizing: border-box;
-    padding: 10px;
+
+  .left-section,
+  .right-section {
+    width: 100%;
   }
-  
+
+  .right-section {
+    height: 50vh;
+    position: relative;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .completion-text {
+    font-size: 2rem;
+  }
+}

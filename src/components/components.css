@@ -12,9 +12,24 @@
   z-index: 1000;
 }
 
+.navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-right: auto;
+  margin-left: 3.3rem;
+}
+
+.navbar-brand:hover {
+  color: #f5f5f5;
+}
+
 .nav-buttons {
   display: flex;
   gap: 1rem;
+  margin-right: 2rem;
 }
 
 .login-button,
