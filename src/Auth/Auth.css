@@ -1,0 +1,431 @@
+.AUTH {
+    align-items: flex-start;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .AUTH .Wallpaper {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  .AUTH .MainRectangle {
+    background-color: #d3d5d1cc;
+    border-radius: 50px;
+    height: 840px;
+    left: 0;
+    position: absolute;
+    top: 123px;
+    width: 863px;
+  }
+  
+  .AUTH .Auth-main {
+    color: #000000;
+    font-family: "Sahitya-Bold", Helvetica;
+    font-size: 70px;
+    font-weight: 700;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 13px;
+    width: 238px;
+    white-space: nowrap;
+  }
+
+  .AUTH .Out-icon {
+    background-color: #eff2ed;
+    border-radius: 30px;
+    height: 112px;
+    left: 50px;
+    position: absolute;
+    top: 178px;
+    width: 117px;
+  }
+
+  .AUTH .log-in {
+    height: 61px !important;
+    left: 80px !important;
+    position: absolute !important;
+    top: 204px !important;
+    width: 57px !important;
+  }
+
+  .AUTH .log-in .icon {
+    height: 50px;
+    left: 5px;
+    position: absolute;
+    top: 6px;
+    width: 47px;
+  }
+
+  .AUTH .Login-LoginPage-button {
+    color: #000000;
+    font-family: "Saira-Bold", Helvetica;
+    font-size: 45px;
+    font-weight: 700;
+    left: 232px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 203px;
+    width: 130px;
+    white-space: nowrap;
+  }
+  
+  .AUTH .Login-SignUpPage-button {
+    color: #000000;
+    font-family: "Saira-Thin", Helvetica;
+    font-size: 40px;
+    font-weight: 100;
+    left: 403px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 209px;
+    width: 188px;
+    white-space: nowrap;
+  }
+  
+  .AUTH .Google {
+    height: 47px;
+    left: 67px;
+    object-fit: cover;
+    position: absolute;
+    top: 331px;
+    width: 47px;
+  }
+
+  .AUTH .Google-rectangle {
+    background-color: #eff2ed;
+    border-radius: 30px;
+    height: 61px;
+    left: 50px;
+    position: absolute;
+    top: 320px;
+    width: 540px;
+  }
+
+  .AUTH .Google-login-text {
+    color: #000000;
+    font-family: "Rum Raisin-Regular", Helvetica;
+    font-size: 25px;
+    font-weight: 400;
+    left: 208px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 336px;
+    width: 224px;
+    white-space: nowrap;
+  }
+  
+  .AUTH .Login-id {
+    color: #000000;
+    font-family: "Saira-Thin", Helvetica;
+    font-size: 25px;
+    font-weight: 100;
+    background-color: #eff2ed;
+    border-radius: 10px;
+    height: 61px;
+    left: 50px;
+    position: absolute;
+    top: 472px;
+    width: 427px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: none;
+  }
+
+  .AUTH .Login-id-text {
+    color: #000000;
+    font-family: "Saira-Bold", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 432px;
+    width: 261px;
+    white-space: nowrap;
+  }
+  
+  .AUTH .Login-password {
+    color: #000000;
+    font-family: "Saira-Thin", Helvetica;
+    font-size: 25px;
+    font-weight: 100;
+    background-color: #eff2ed;
+    border-radius: 10px;
+    height: 61px;
+    left: 51px;
+    position: absolute;
+    top: 584px;
+    width: 426px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: none;
+  }
+
+  .AUTH .Login-password-text {
+    color: #000000;
+    font-family: "Saira-Bold", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 51px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 544px;
+    width: 261px;
+    white-space: nowrap;
+  }
+  
+  .AUTH .Login-button {
+    background-color: #7f7360; /* 버튼 배경색 */
+    border-radius: 20px; /* 둥근 모서리 */
+    height: 61px; /* 버튼 높이 */
+    width: 200px; /* 버튼 너비 */
+    position: absolute;
+    left: 48px; /* 버튼 위치 조정 */
+    top: 678px; /* 버튼 위치 조정 */
+    color: #e3e5e1; /* 버튼 텍스트 색상 */
+    font-family: "Rum Raisin-Regular", Helvetica; /* 폰트 */
+    font-size: 35px; /* 텍스트 크기 */
+    font-weight: 400; /* 텍스트 굵기 */
+    letter-spacing: 0; /* 글자 간격 */
+    line-height: normal; /* 줄 높이 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    display: flex; /* 버튼 내 텍스트 정렬을 위한 플렉스박스 */
+    align-items: center; /* 수직 정렬 */
+    justify-content: center; /* 수평 정렬 */
+    cursor: pointer; /* 클릭 가능한 커서 */
+    border: none; /* 버튼 테두리 제거 */
+  }
+  
+  .AUTH .Login-button:hover {
+    background-color: #6a5c4c; /* 호버 시 색상 변경 */
+  }
+
+  .AUTH .SignUp-LoginPage-button {
+    color: #000000;
+    font-family: "Saira-Thin", Helvetica;
+    font-size: 40px;
+    font-weight: 100;
+    left: 232px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 209px;
+    width: 130px;
+    white-space: nowrap;
+  }
+
+  .AUTH .SignUp-SignUpPage-button {
+    color: #000000;
+    font-family: "Saira-Bold", Helvetica;
+    font-size: 45px;
+    font-weight: 700;
+    left: 402px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 203px;
+    width: 188px;
+    white-space: nowrap;
+  }
+
+  .AUTH .SignUp-id {
+    background-color: #eff2ed;
+    border-radius: 10px;
+    height: 61px;
+    left: 50px;
+    position: absolute;
+    top: 347px;
+    width: 385px;
+    font-family: "Saira-Thin", Helvetica;
+    font-size: 25px;
+    font-weight: 100;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: none;
+  }
+
+  .AUTH .SignUp-id-text {
+    color: #000000;
+    font-family: "Saira-Bold", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 299px;
+    width: 261px;
+    white-space: nowrap;
+  }
+
+  .AUTH .SignUp-Name {
+    background-color: #eff2ed;
+    border-radius: 10px;
+    height: 61px;
+    left: 464px;
+    position: absolute;
+    top: 347px;
+    width: 385px;
+    font-family: "Saira-Thin", Helvetica;
+    font-size: 25px;
+    font-weight: 100;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: none;
+  }
+
+  .AUTH .SignUp-Name-Text {
+    color: #000000;
+    font-family: "Saira-Bold", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 464px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 299px;
+    width: 261px;
+    white-space: nowrap;
+  }
+
+  .AUTH .SignUp-School-id {
+    background-color: #eff2ed;
+    border-radius: 10px;
+    height: 61px;
+    left: 48px;
+    position: absolute;
+    top: 467px;
+    width: 385px;
+    font-family: "Saira-Thin", Helvetica;
+    font-size: 25px;
+    font-weight: 100;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: none;
+  }
+
+  .AUTH .SignUp-School-id-text {
+    color: #000000;
+    font-family: "Saira-Bold", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 417px;
+    width: 261px;
+    white-space: nowrap;
+  }
+
+  .AUTH .SignUp-Password {
+    background-color: #eff2ed;
+    border-radius: 10px;
+    height: 61px;
+    left: 50px;
+    position: absolute;
+    top: 587px;
+    width: 385px;
+    font-family: "Saira-Thin", Helvetica;
+    font-size: 25px;
+    font-weight: 100;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: none;
+  }
+
+  .AUTH .SignUp-Password-text {
+    color: #000000;
+    font-family: "Saira-Bold", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 537px;
+    width: 261px;
+    white-space: nowrap;
+  }
+
+  .AUTH .SignUp-Password-Confirm {
+    background-color: #eff2ed;
+    border-radius: 10px;
+    height: 61px;
+    left: 50px;
+    position: absolute;
+    top: 707px;
+    width: 385px;
+    font-family: "Saira-Thin", Helvetica;
+    font-size: 25px;
+    font-weight: 100;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: none;
+  }
+
+  .AUTH .SignUp-Password-Confirm-text {
+    color: #000000;
+    font-family: "Saira-Bold", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 657px;
+    width: 261px;
+    white-space: nowrap;
+  }
+
+  .AUTH .SignUp-button {
+    background-color: #7f7360;
+    border-radius: 20px;
+    height: 61px;
+    width: 200px;
+    position: absolute;
+    left: 50px;
+    top: 821px;
+    color: #e3e5e1;
+    font-family: "Rum Raisin-Regular", Helvetica;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+  }
+
+  .AUTH .SignUp-button:hover {
+    background-color: #6a5c4c; /* 호버 시 색상 변경 */
+  }
+
+  .AUTH .parent-container {
+    position: relative;
+  }
+  
+  .AUTH .checkbox-container {
+    position: absolute;
+    left: 464px;
+    top: 467px;
+    height: 301px;
+    width: 385px;
+  }

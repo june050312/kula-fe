@@ -1,11 +1,16 @@
 import './components.css';
+import {Link} from 'react-router-dom'
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-buttons">
-        <button className="login-button">로그인</button>
-        <button className="signup-button">회원가입</button>
+        <Link className="login-button" to="/login">
+          로그인
+        </Link>
+        <Link className="signup-button" to="/signup">
+          회원가입
+        </Link>
       </div>
     </nav>
   );

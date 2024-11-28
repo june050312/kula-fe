@@ -1,0 +1,13 @@
+:root {
+    --greygrey-100: rgba(222, 222, 222, 1);
+    --greygrey-200: rgba(207, 207, 207, 1);
+    --greygrey-300: rgba(185, 185, 185, 1);
+    --greygrey-400: rgba(171, 171, 171, 1);
+    --greygrey-50: rgba(245, 245, 245, 1);
+    --greygrey-500: rgba(150, 150, 150, 1);
+    --greygrey-600: rgba(137, 137, 137, 1);
+    --greygrey-700: rgba(107, 107, 107, 1);
+    --greygrey-800: rgba(83, 83, 83, 1);
+    --greygrey-900: rgba(63, 63, 63, 1);
+  }
+  
