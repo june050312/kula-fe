@@ -159,7 +159,7 @@ function MainPage() {
         <div className="image-container">
           <img src="/img/MainPage_background.jpg" alt="메인 이미지" className="main-image" />
           <div className="image-overlay">
-            <p className="completion-text">세탁이 완료되었습니다</p>
+            <p className="completion-text">"We believe in laundry"</p>
           </div>
         </div>
       </section>

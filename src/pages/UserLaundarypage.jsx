@@ -4,7 +4,6 @@ import WashingMachine from '../components/WashingMachine/WashingMachine';
 import './Pages.css';
 
 function UserLaundarypage() {
-  const { name } = useParams();
   const location = useLocation();
   const [currentUser] = useState("user456"); // 임시 사용자 ID
   const [laundryData, setLaundryData] = useState(location.state?.laundryData);
