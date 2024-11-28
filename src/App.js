@@ -10,10 +10,12 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/laundry/:name" element={<UserLaundarypage />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/laundry/:name" element={<UserLaundarypage />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

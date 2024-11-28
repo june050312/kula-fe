@@ -20,6 +20,12 @@
   object-fit: contain;
 }
 
+.machine-number {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
 .machine-status {
   width: 100%;
   padding: 0.8rem;
