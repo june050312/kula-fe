@@ -42,13 +42,22 @@ const SignUp = () => {
       alert('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
       return;
     }
+
+    fetch("http://localhost:8080/api/user/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    })
+    // 로그인 함수 호출
+    // signup(form.name, form.schoolId, form.id, form.password, () => {
+    //   alert("회원가입 성공")
+    //   console.log("회원가입 성공");
+    //   navigate("/Login"); // 회원가입 성공 후 /로그인 페이지로 이동
+    // });
   }
-  // 로그인 함수 호출
-    signup(form.name, form.schoolId, form.id, form.password, () => {
-      alert("회원가입 성공")
-      console.log("회원가입 성공");
-      navigate("/Login"); // 회원가입 성공 후 /로그인 페이지로 이동
-    });
+  
 
 
   return (
@@ -85,8 +94,8 @@ const SignUp = () => {
         className="SignUp-School-id"
         name="schoolId"
         placeholder="학교 아이디"
-        value={form.schoolid}
-        onChange={changed('schoolid')}
+        value={form.schoolId}
+        onChange={changed('schoolId')}
         onKeyDown={handleKeyDown}
       />
       <div className="SignUp-Name-Text">이름</div>

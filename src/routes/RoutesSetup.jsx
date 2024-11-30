@@ -30,7 +30,7 @@ export default function RoutesSetup() {
       
       {/* 로그아웃 페이지 */}
       <Route
-        path="logout"
+        path="/logout"
         element={
           <RequireAuth>
             <Logout />

@@ -45,11 +45,23 @@ const Login = () => {
       return;
     }
 
+
+    fetch("http://localhost:8080/api/user/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+      credentials: "include"
+    })
+
+    navigate("/")
+
     // 로그인 함수 호출
-    login(form.id, form.password, () => {
-      console.log("로그인 성공");
-      navigate("/Main"); // 로그인 성공 후 /Main 페이지로 이동
-    });
+    // login(form.id, form.password, () => {
+    //   console.log("로그인 성공");
+    //   navigate("/Main"); // 로그인 성공 후 /Main 페이지로 이동
+    // });
   };
   return (
     <div className="AUTH">

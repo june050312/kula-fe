@@ -8,15 +8,18 @@ export const AuthContext = createContext({
   checkAuth: async () => {}, // 로그인 여부 확인 함수
 });
 
+const localStorage = window.localStorage
+
 // AuthProvider 컴포넌트
 export const AuthProvider = ({ children }) => {
   const [loggedUser, setLoggedUser] = useState(undefined);
 
   // 회원가입
   const signup = useCallback((user_id, password, callback) => {
+    console.log("잘 되는 지 확인")
     const user = { user_id, password };
 
-    fetch("/api/user/register", {
+    fetch("http://localhost:8080/api/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +41,7 @@ export const AuthProvider = ({ children }) => {
   const login = useCallback((user_id, password, callback) => {
     const user = { user_id, password };
 
-    fetch("/api/user/login", {
+    fetch("http://localhost:8080/api/user/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -71,7 +74,7 @@ export const AuthProvider = ({ children }) => {
   // 로그인 여부 확인
   const checkAuth = useCallback(async () => {
     try {
-      const response = await fetch("/api/user/check-auth", {
+      const response = await fetch("http://localhost:8080/api/user/login", {
         method: "GET",
         credentials: "include", // 쿠키 포함
       });
