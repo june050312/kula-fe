@@ -1,27 +1,45 @@
-/* 세탁기 객체 CSS */
 .washing-machine {
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .washing-machine img {
-    width: 90px;
-    height: 110px;
-  }
-  
-  .washing-machine button {
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    color: white;
-  }
-  
-  .available-button {
-    background-color: green;
-    cursor: pointer;
-  }
-  
-  .occupied-button {
-    background-color: red;
-    cursor: not-allowed;
-  }  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: gray;
+  padding: 0 2rem;
+  border-radius: 1rem;
+  margin: 0 2rem;
+  height: 24rem;
+}
+
+.available-button {
+  width: 9rem;
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: large;
+  border: 0;
+}
+
+.occupied-button {
+  width: 9rem;
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: large;
+  border: 0;
+  background-color: orangered;
+  color: black;
+}
+
+.available-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+}
+
+.occupied-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+}

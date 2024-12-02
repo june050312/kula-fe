@@ -9,6 +9,7 @@ import NoMatch from './NoMatch';
 import '../App.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Laundary from '../pages/Laundary';
 
 //로그인한 상태이면 다른 화면을 메인으로 출력해야하는데 딱히 필요없을지도?
 
@@ -36,6 +37,17 @@ export default function RoutesSetup() {
             <Logout />
           </RequireAuth>
         }
+      />
+
+      <Route path='/laundary/:shop' element={
+        <RequireAuth>
+          <Navbar/>
+            <div className='content'>
+            <Laundary/>
+            </div>
+          <Footer/>
+        </RequireAuth>
+      }
       />
       
       {/* 잘못된 경로 404 페이지 */}

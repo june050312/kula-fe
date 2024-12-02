@@ -60,6 +60,7 @@ body {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  justify-content: space-between;
 }
 
 .search-input {
