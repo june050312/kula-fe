@@ -12,7 +12,7 @@ const WashingMachine = ({ machine }) => {
     
     axios.put("http://localhost:8080/api/laundary", {
       id: machine.laundary_id,
-      status: newStatus
+      status: newStatus // 새로운 상태 반영
     }, { withCredentials: true })
     .then(res => {
       console.log('Status updated successfully');
